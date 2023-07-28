@@ -250,6 +250,7 @@ function hapusCustomer($id){
     return mysqli_affected_rows($conn);
 }
 
+
 function ubahCustomer($ubahData){
     if( isset($_POST["submit"])){
         global $conn;
@@ -277,5 +278,8 @@ function ubahCustomer($ubahData){
     }
 }
 function searchCus($keyCari){
-    
+    $query="SELECT * FROM customer 
+            WHERE nama LIKE '%$keyCari%'
+            ";
+    return fetchingData($query);
 }

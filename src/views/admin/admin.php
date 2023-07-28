@@ -1,5 +1,5 @@
 <?php 
- require ('module.php');
+ require ('./module/module.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

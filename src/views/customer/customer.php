@@ -22,7 +22,7 @@ if(isset($_POST["cari"])){
             <div class="perintah">
                 <form action="" method="post">
                     <input type="text" name="keyInput" autofocus autocomplete="off" placeholder="input name">
-                    <button type="button" name="cari">Cari</button>
+                    <button type="submit" name="cari">Cari</button>
                 </form>
                 <div class="tambah">
                     <a href="tambah_customer.php">Tambah</a>
