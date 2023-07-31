@@ -21,8 +21,7 @@ if(isset($_POST["cari"])){
             <h1>Table customer</h1>
             <div class="perintah">
                 <form action="" method="post">
-                    <input type="text" name="keyInput" autofocus autocomplete="off" 
-                    placeholder="input name">
+                    <input type="text" name="keyInput" autofocus autocomplete="off" placeholder="input name">
                     <button type="submit" name="cari">Cari</button>
                 </form>
                 <div class="tambah">

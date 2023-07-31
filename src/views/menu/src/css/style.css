@@ -1,0 +1,29 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+}
+.container{
+    width: 60%;
+}
+h1{
+    text-align: center;
+}
+.list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.list label{
+    width: 20%;
+}
+.list input{
+    width: 50%;
+}
+.list:nth-child(5){
+    width: 20%;
+    justify-content: center;
+}
