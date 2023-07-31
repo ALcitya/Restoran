@@ -1,5 +1,5 @@
 <?php
-require_once ('../module.php');
+require_once ('../../../app/module/module.php');
    
     if(addMenu($_POST) > 0){
         echo "<script>

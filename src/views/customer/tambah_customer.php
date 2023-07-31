@@ -1,5 +1,5 @@
 <?php
-    require '../module.php';
+    require '../../../app/module/module.php';
 
     if(addCustomer($_POST) > 0){
         echo "<script>

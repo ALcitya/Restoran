@@ -1,5 +1,5 @@
 <?php
-    require '../module.php';
+    require '../../../app/module/module.php';
     
     $id =$_GET["id_customer"];
 

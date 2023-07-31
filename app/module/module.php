@@ -224,6 +224,28 @@ function hapusMenu($id){
     mysqli_query($conn,"DELETE FROM menu WHERE id_menu=$id");
     return mysqli_affected_rows($conn);
 }
+function ubahMenu($ubah){
+    if( isset($_POST["submit"])){
+        global $conn;
+        $id=$ubah["id_menu"];
+        $nama = htmlspecialchars($ubah["nama"]);
+        $price = htmlspecialchars($ubah["price"]);
+        $stok = htmlspecialchars($ubah["stok"]);
+        $category_menu = htmlspecialchars($ubah["category_menu"]);
+
+        $query="UPDATE customer SET
+                nama = '$nama',
+                price = '$price',
+                stok = '$stok',
+                category_menu = '$category_menu',
+
+                WHERE id_menu = $id;
+                ";
+
+        mysqli_query($conn, $query);
+        return mysqli_affected_rows($conn);
+    }
+}
 function addCustomer($data_customer){
     if( isset($_POST["submit"]) ){
         global $conn;
@@ -277,5 +299,8 @@ function ubahCustomer($ubahData){
     }
 }
 function searchCus($keyCari){
-    
+    $query="SELECT * FROM customer 
+            WHERE nama LIKE '%$keyCari%'
+            ";
+    return fetchingData($query);
 }

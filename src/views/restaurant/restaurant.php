@@ -1,18 +1,20 @@
 <?php 
- require ('module.php');
+ require_once ('../../../app/module/module.php');
+
+ $restaurant=fetchingData("SELECT * FROM restaurant")
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
     <main>
         <div class="container">
-            <h1>Table Admin</h1>
+            <h1>Table restoran</h1>
             <div class="perintah">
                 <div class="search">
                     <input type="text">
@@ -22,20 +24,22 @@
             </div>
             <table>
                 <tr>
-                    <td>id kasir</td>
-                    <td>nama</td>
-                    <td>id customer</td>
+                    <td>id</td>
+                    <td>input date</td>
+                    <td>total income</td>
                     <td>aksi</td>
                 </tr>
+                <?php foreach($restaurant as $res) : ?>
                 <tr>
-                    <td>1</td>
-                    <td>Andre</td>
-                    <td>3</td>
+                    <td><?php echo $res["id_restaurant"] ;?></td>
+                    <td><?php echo $res["transacsion_date"] ;?></td>
+                    <td><?php echo $res["total_income"] ;?></td>
                     <td>
-                        <button href="">Ubah</button> ||
-                        <button href="">Hapus</button>
+                        <a href="">Ubah</a> ||
+                        <a href="">Hapus</a>
                     </td>
                 </tr>
+                <?php endforeach ?>
             </table>
         </div>
     </main>

@@ -1,5 +1,5 @@
 <?php 
- require ('../module.php');
+ require ('../../../app/module/module.php');
  $menu = fetchingData("SELECT * FROM menu");
 ?>
 <!DOCTYPE html>

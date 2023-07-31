@@ -1,5 +1,5 @@
 <?php 
-require_once '../module.php';
+require_once '../../../app/module/module.php';
 
 $customer = fetchingData("SELECT * FROM customer");
 
@@ -12,7 +12,7 @@ if(isset($_POST["cari"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,8 +21,9 @@ if(isset($_POST["cari"])){
             <h1>Table customer</h1>
             <div class="perintah">
                 <form action="" method="post">
-                    <input type="text" name="keyInput" autofocus autocomplete="off" placeholder="input name">
-                    <button type="button" name="cari">Cari</button>
+                    <input type="text" name="keyInput" autofocus autocomplete="off" 
+                    placeholder="input name">
+                    <button type="submit" name="cari">Cari</button>
                 </form>
                 <div class="tambah">
                     <a href="tambah_customer.php">Tambah</a>

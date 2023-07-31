@@ -1,5 +1,5 @@
 <?php 
- require ('../module.php');
+ require '../../../app/module/module.php';
 
  $kasir=fetchingData("SELECT * FROM kasir")
 ?>
@@ -20,7 +20,7 @@
                     <input type="text">
                     <button type="button">Cari</button>
                 </div>
-                <button class="tambah">Tambah data</button>
+                <a href="tambah.php" class="tambah">Tambah data</a>
             </div>
             <table>
                 <tr>
